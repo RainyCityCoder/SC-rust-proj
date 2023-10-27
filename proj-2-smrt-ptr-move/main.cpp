@@ -31,6 +31,10 @@ int main() {
   printList(holderB.listHolder);
   printVector(holderB.vectorHolder);
 
+  vector<int> vectorTwo = {2,4,6};
+  list<int> listTwo = {1,3,5};
+  printList(listTwo);
+  printVector(vectorTwo);
 
   return 0;
 }
