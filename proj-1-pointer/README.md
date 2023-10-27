@@ -4,16 +4,8 @@ A simple program demonstrating conceptual understanding of C pointer arithmetic.
 
 ## Dependencies
 
-Ensure you have a C compiler installed. [GCC](https://gcc.gnu.org/) instructions are provided here. Compilation commands (run these from the same location as the `main.c` file):
-
-- Windows: `gcc main.c -o main.exe`
-- Mac: `gcc -o main main.c`
-- Linux: `gcc main.c -o main`
+Ensure you have a C compiler installed.
 
 ## How to run:
 
-Download the `main.c` file, or clone this repository. Refer to the steps in [Dependencies](#dependencies) to install a compiler, if necessary, and compile `main.c`. Once compiled, the program may be run via terminal with:
-
-- Windows: `main.exe`
-- MacOS: `./main`
-- Linux: `./main`
+Download the `main.c` and 'makefile" files, or clone this repository. In terminal run `~$ make` (ensure the `pwd` is the same location as both files).
