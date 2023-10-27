@@ -8,4 +8,4 @@ Ensure you have a C compiler installed.
 
 ## How to run:
 
-Download the `main.c` and 'makefile" files, or clone this repository. In terminal run `~$ make` (ensure the `pwd` is the same location as both files).
+Download the `main.c` and 'makefile" files, or clone this repository. In terminal run `~$ make` (ensure the `pwd` is the same location as both files). You can then run `~$ ./output` in the terminal to run the program.
