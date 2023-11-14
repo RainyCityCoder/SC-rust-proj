@@ -38,12 +38,11 @@ int main() {
   std::cout << "" << endl;
 
   std::cout << "Moving elements individually: holderB's items back to holderA" << endl;
-   for (auto itr = holderB.vectorHolder.begin(); itr != holderB.vectorHolder.end();)
-  { // Here's one way to do it.
+  for (auto itr = holderB.vectorHolder.begin(); itr != holderB.vectorHolder.end();)
+  { // This is one way to do it.
     holderA.vectorHolder.push_back(*itr);
     itr = holderB.vectorHolder.erase(itr);
   }
-    
   for (auto i : holderB.listHolder) 
   { // Here's another.
     holderA.listHolder.push_back(i);
