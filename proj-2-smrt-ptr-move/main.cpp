@@ -40,13 +40,11 @@ int main() {
   std::cout << "Moving elements individually: holderB's items back to holderA" << endl;
   for (auto i : holderB.vectorHolder){
     holderA.vectorHolder.push_back(i);
-    // holderB.vectorHolder.erase(i);
   }
   holderB.vectorHolder.clear();
     
   for (auto i : holderB.listHolder) {
     holderA.listHolder.push_back(i);
-    // holderB.listHolder.erase(i);
   }
   holderB.listHolder.clear();
   std::cout << "HolderB's list & vector respectively, now empty:" <<endl;
