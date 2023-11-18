@@ -30,7 +30,7 @@ fn ascii_to_morse() {
 
 fn morse_to_ascii() {
     let mut input: String = String::new();
-    println!("What do you want translated to ASCII (separate letters with a space)?");
+    println!("What do you want translated to ASCII (please use underscores and periods for dots and dashes, and separate letters with a space)?");
     match io::stdin().read_line(&mut input) {
         Ok(_) => {
             println!("Here is {} in ASCII:", input);
