@@ -10,7 +10,7 @@ A CLI morse code translator.
 
 ## How to run:
 
-Install Rust and Cargo, if necessary. Download the `main.rs` file in this directory, or clone this repository. The file may be run without building by using one of the following commands:
+Install Rust and Cargo, if necessary. Download the `src` directory and `Cargo.toml` file in this directory to the same local location, or clone this repository. The project may be run without building by using one of the following terminal commands from within the `src` directory:
 
 #### Linux / MacOS
 
