@@ -1,19 +1,35 @@
+extern crate morse;
+use rust_xlsxwriter::*;
 use std::error::Error;
 use csv;
-extern crate rprompt;
-extern crate morse;
 use morse::encode;
 
 fn main() {
-    if let Err(e) = read_from_file("./sample.csv") { // make path user-selectable???
-        eprintln!("{}", e);
-    }
+    create_xlsx_and_begin();
 }
 
-fn read_from_file(path: &str) -> Result<(), Box<dyn Error>> {
-    let mut reader = csv::Reader::from_path(path)?; 
+fn create_xlsx_and_begin() {
+    let mut workbook = Workbook::new();
+    let sheet = workbook.add_worksheet();
+    let _ = sheet.set_name("test");
+    
+    if let Err(e) = read_from_file("./sample.csv") {
+        eprintln!("{}", e);
+    } 
+    
+    
+    let _ = workbook.save("./output.xlsx");
 
-    for result in reader.records() {
+}
+
+fn read_from_file(path: &str, ) -> Result<(), Box<dyn Error>> {
+    let mut csv_file = csv::Reader::from_path(path)?; 
+
+    {
+        let headers = csv_file.headers()?;
+        println!("{:?}", headers);
+    }
+    for result in csv_file.records() {
         let record = result?;
         for field in record.iter() {
             ascii_to_morse(field);
